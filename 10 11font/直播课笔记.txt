@@ -1,0 +1,10 @@
+1.rem是根标签也就是html的font-size的设定。字体默认16px；最小是12px；
+2.font-weight：没有单位；100-300是个变细；400.500正常，600-900加粗
+3font-variant：small-caps 小型字母大写；小写字母大写，但大小程度和小写一样
+4font简写font：字体大小 font-family
+字体大小/line-height font-family其他样式加在前面，颜色值单独写
+text-transform。uppercase lowercase capitalize
+justify换行后有空隙，字与盒子两端对齐
+text indent首行缩进。letter-spacing字间距word-spacing
+white-space
+work-break：break-all？强制换行字母会分开不成一个完整的单词，也会换行
