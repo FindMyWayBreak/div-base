@@ -1,0 +1,16 @@
+1：radial-gradient(#fff 15%,transparent 15%）的意思0-15%白色，其他是透明的
+这个其起始点就是#FFF
+
+万章 2018/12/27 星期四 19:54:54
+从白色作为起始点
+19:55:01
+万章 2018/12/27 星期四 19:55:01
+0~15%是白色
+
+万章 2018/12/27 星期四 19:55:16
+15%之后切换成透明色,显示父元素的颜色
+
+2：linear-gradient(to top,red 50%,transparent 50%),linear-gradient(40deg,transparent 40%,black 40%,black 60%,transparent 60%),linear-gradient(-40deg,transparent 40%,black 40%,black 60%,transparent 60%);有没有大佬知道为什么第一行代码放到最后没办法遮住多余的出来的那一半？
+第一句代码放到最后显示的是在第二三句代码底下。层叠优先性比二三句要低，放在第一行才会优先级高于二三句。
+
+
