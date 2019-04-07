@@ -1,0 +1,13 @@
+124:24
+2method的用法用于？后发送填写的数据值，post后台network中发送的数据，action只是跳转网址
+method提交要给数据加上name属性才能显示在网址栏
+name便与后台抓取数据，
+3不怎么理解伪元素72：:0
+4select中option的value1值是什么用<select >
+<option value = "A">B</option>
+</select>
+其中“A”“B”有何区别，各自代表什么意思？
+答案：
+B是显示在网页上的内容
+A是实际传给后台表单处理程序
+5textarea属性resize必须在标签选择器上用
