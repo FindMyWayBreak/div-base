@@ -1,36 +1,36 @@
-文档流半文档流脱离文档流？29：:15；
-半文档流撑不开外面的元素；不占位置
-包裹性：能有内容撑开float的属性
-1a标签的字体颜色不能被继承；（1）在a标签上改（2）在a标签上加上color：inherit
-2inline-blockfloat的独立性？block和inline-block不是同一层叠顺序，可以看成两个独立的个体从而形成bfc，独立性主要是用来解决外边距合并
-3清除浮动是因为float会导致没设高度的父元素....高度的坍塌，flaot元素的高度没用.....添加高度就好，
-4clearboth左表示是什么右表示的是什么?与他右边的盒子要清除左浮动。清除左浮动后变成div盒子左边没浮动。
-5清除的浮动是与父盒子（无高度）同级的盒子（有float），和它父盒子的子盒子（有float）排列在一列。原因是父盒子的高度坍塌
-比如一个大对象内有2个小对象使用了css float样式为了避免产生浮动，大对象背景或边框不能正确显示，这个时候我们就需要clear:both清除浮动。
-6浮动与垂直外边距合并的关系？
-7双飞翼布局的适配窗口缩放：但是center的大小是包括左右连个位置么？问什么加了margin它的大小会缩小（float元素撑不起盒子的高度）
-centerdiv放div左右中间为什么会发生积压现象
-未浮动div放到两个浮动元素的最上面会独占一行，两个放到中间会把center后面的元素挤压下去。
-放到最后才会两个浮动元素和它一行。
-这就是普通流啊
+1包裹性？
+2样式与加载的顺序有关<link rel="stylesheet">放的地方有关。
+3tbody，thead，tfoot存放的位置。他们三个同级
+4怎么出现每个单元格标签。<table border="1">
+5<td colspan="2"></td>不用加style
+6rowspan="2"不同类型的标签无法合并th td
+7模拟table div上加属性（1）display=table（2）display=table-row(3)display=table-cell
+8在下载的zip 中demofontclass.html中查看名字
+9改变图标的样式要大于所引入文件的优先级
+10阿里图标第二种uncoide前面和第一种一样用link标签引入<i class="iconfont icon-lingyi"></i>
+	<i class="iconfont">&#xe602</i>
+变了一下
+11.在线引入的只是css文档加上href中加上网址；要加上https
+12.外部引入css方法
+创建一个css文档，第一行加上@charset "UTF-8"
+1写上<link rel="stylesheet" href="">
+2@import url("css/index.css")必须放在style的顶行
+13自定义字体 ！important优先级最高
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1545628896091'); /* IE9*/
+  src: url('iconfont.eot?t=1545628896091#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAATAAAsAAAAABzwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFY8eEf0Y21hcAAAAYAAAABLAAABcOcqtbBnbHlmAAABzAAAAQ0AAAFIhimJw2hlYWQAAALcAAAALwAAADYTrF+9aGhlYQAAAwwAAAAcAAAAJAfeA4NobXR4AAADKAAAAAgAAAAICAAAAGxvY2EAAAMwAAAABgAAAAYApAAAbWF4cAAAAzgAAAAgAAAAIAEVAGxuYW1lAAADWAAAAUUAAAJtPlT+fXBvc3QAAASgAAAAHwAAADDm429veJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkYWCcwMDKwMHUyXSGgYGhH0IzvmYwYuRgYGBiYGVmwAoC0lxTGByeMT1jYm7438AQw9zA0AAUZgTJAQDddQvneJxjYGBgZWBgYAZiHSBmYWBgDGFgZAABP6AoI1icmYELLM7CoARWwwISf8b0/z+MBPJZwCQDIxvDKOABkzJQHjisIJiBEQAtzglxAHicY+BkYPjfwMLA3MDAwSDIIMOgzmDIYM3gzhDMEM/AYM4mx2Supq7GaKbHxC4mLsYoxyhuZGauxwgUAhJKbOxAATF1Yz1Gdj5GcTtGYWU5RnM7RnU+RmY2FnYxFnEzFXM1FWagUjtGc6BSoDgfI0gPkKvH2M3BIRrurCJlxbQZxvr73apSgs9V06XOQo0xH8Fewtl+Q5SLgyN0XxJn2zUxICtkb9Ktf/dZWRkVb91iVGRl/Xf/VkoLM3NLCoRk9WaFoV2OkaIcHKY2UowbYKy/vzKrGC2N+AyVuZhc4UxxE04h7nBnK4e/DTAWUyjvbV3d27xg8h8v3PiUFsbLLN0xMd0sYJKBAQCav0bJAAAAeJxjYGRgYABi4W0CIfH8Nl8ZuFkYQOCGW+8DBP2/gYWBuQHI5WBgAokCABGQCgQAeJxjYGRgYG7438AQw8IAAkCSkQEVMAEARwgCawQAAAAEAAAAAAAAAACkAAAAAQAAAAIAYAAJAAAAAAACAAAACgAKAAAA/wAAAAAAAHicZY9NTsMwEIVf+gekEqqoYIfkBWIBKP0Rq25YVGr3XXTfpk6bKokjx63UA3AejsAJOALcgDvwSCebNpbH37x5Y08A3OAHHo7fLfeRPVwyO3INF7gXrlN/EG6QX4SbaONVuEX9TdjHM6bCbXRheYPXuGL2hHdhDx18CNdwjU/hOvUv4Qb5W7iJO/wKt9Dx6sI+5l5XuI1HL/bHVi+cXqnlQcWhySKTOb+CmV7vkoWt0uqca1vEJlODoF9JU51pW91T7NdD5yIVWZOqCas6SYzKrdnq0AUb5/JRrxeJHoQm5Vhj/rbGAo5xBYUlDowxQhhkiMro6DtVZvSvsUPCXntWPc3ndFsU1P9zhQEC9M9cU7qy0nk6T4E9XxtSdXQrbsuelDSRXs1JErJCXta2VELqATZlV44RelzRiT8oZ0j/AAlabsgAAAB4nGNgYoAALgbsgImRiZGZgS0nMy+9MpOBAQAQsgKoAA==') format('woff'),
+  url('iconfont.ttf?t=1545628896091') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1545628896091#iconfont') format('svg'); /* iOS 4.1- */
+}
 
-万章 2018/12/24 星期一 20:03:01
-我之前在课上讲过的
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-万章 2018/12/24 星期一 20:03:07
-第一个元素飘起来了
+.icon-lingyi:before { content: "\e602"; }
 
-万章 2018/12/24 星期一 20:03:11
-第二往上走
-
-万章 2018/12/24 星期一 20:03:18
-第三个再飘棋牌
-
-万章 2018/12/24 星期一 20:03:22
-飘起来
-20:03:34
-万章 2018/12/24 星期一 20:03:34
-每个元素飘起来都是原地飘起来的
-
-万章 2018/12/24 星期一 20:03:46
-不能跑到前一个元素的上面去
