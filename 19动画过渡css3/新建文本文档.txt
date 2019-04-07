@@ -1,0 +1,39 @@
+一：1transtion加在hover上回去没有过渡效果
+2transition-property
+transition-duration
+-delay
+-timing-function3运动曲线
+linear
+cubic-bezier
+transition是js封装写出来的
+js的同步异步？
+时间片js是单线程依次进行一次不过开始的时间很短
+二：关键帧
+过渡帧
+@keyframes 名字
+{
+25%{
+}
+到100 %
+}
+动画
+animation-name
+animation-duration
+-delay
+-iteration-count执行次数infinite无限的
+-iteration-direction：alternate-reverse动画运动方向的改变
+play-state悬浮后可以暂停pause
+-fill-mode动画最后一针停在那里
+复合属性
+二：属性选择器？
+伪类选择器？
+浮动有什么用？基本的2的变换
+1transform ：（1）rotate（45）（2）translate（3）skew（4）scale     中      放大缩小
+倾斜x轴y轴想那边 加上兼容前缀
+浏览器渲染原理第20分钟一个枝干加载完了才会加载别的
+定位（重排重绘）和transform更改后那个加载速度快
+transforn更快？原理？直接渲染不用重排位置重绘第二十章41分晕得很查看绘制
+时间的方法？
+transform层级顺序大于定位
+opcity会形成层级顺序大于定位55分
+中基点transform-origin
