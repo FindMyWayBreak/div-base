@@ -1,0 +1,6 @@
+34:22
+21:00js同步异步
+val-开头或等于的选择val和-之间不能有空格
+伪类空格的添加e:not(selector)？没有选中的直接变样式
+e:disabled；enable？
+加入不同位置的transition会有不同的影响放在hover外会有回复动画，在hover内没有回复动画。
