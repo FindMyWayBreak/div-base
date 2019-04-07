@@ -1,0 +1,25 @@
+div>p;选中所有div中的子代元素p；（1）是所有div（必须是子代）
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus?">
+		<meta name="Author" content="左默妄">
+		<meta name="Keywords" content="模板">
+		<meta name="Description" content="练习模板">
+		<title>Document</title>
+		<style type="text/css">
+			div  p{
+				color:red;	
+			}
+		</style>
+	</head>
+	<body>
+	<div class="box">
+	<p>大家好</p>
+	<div>
+	<p>大家好</p>
+	</div>
+	</div>
+	</body>
+</html>
